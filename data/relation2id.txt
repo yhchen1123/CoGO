@@ -1,0 +1,10 @@
+9
+is_a	0
+part_of	1
+has_part	2
+regulates	3
+negatively_regulates	4
+positively_regulates	5
+occurs_in	6
+happens_during	7
+ends_during	8
