@@ -3,7 +3,7 @@
 
 Codes and models for the paper "CoGO: a contrastive learning framework to predict disease similarity based on gene network and ontology structure".
 > CoGO: a contrastive learning framework to predict disease similarity based on gene network and ontology structure \
-> Authors: Yuhao Chen, Yanshi Hu, Xiaotian Hu, Cong Feng, Ming Chen \
+> Authors: Yuhao Chen, Yanshi Hu, Xiaotian Hu, Cong Feng, Ming Chen 
 
 Contact: yuhaoc@zju.edu.cn. Any questions or discussions are welcomed!
 
