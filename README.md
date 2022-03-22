@@ -73,9 +73,14 @@ Method will be tested on benchmark after training.
 
 Gene Ontology(we use all three branches in go.obo file):
 - http://purl.obolibrary.org/obo/go.obo
+
 HumanNet(we use HumanNet-FN):
 - https://www.inetbio.org/humannet/networks/HumanNet-FN.tsv
+
 Gene-GO associations: 
 - https://ftp.ncbi.nih.gov/gene/DATA/gene2go.gz
+
 DisGeNET(we use all gene-disease associations)
 - https://www.disgenet.org/downloads
+
+All the datasets are compressed into ./data/raw.zip
