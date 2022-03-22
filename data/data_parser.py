@@ -295,10 +295,10 @@ class HNParser(Parser):
         return self.adj
 
 
-class DGNetParser(Parser):
+class DGNParser(Parser):
 
     def __init__(self):
-        super(DGNetParser, self).__init__()
+        super(DGNParser, self).__init__()
         self.dmap = None
         self.gmap = None
         self.d2g = None
@@ -313,7 +313,7 @@ class DGNetParser(Parser):
     def write(self):
         self.write_dmap()
         sp.save_npz(self.d2g_file, self.d2g)
-        print("DGNetParser: Done!")
+        print("DGNParser: Done!")
 
     def _init_dmap(self):
         if self.dmap != None:
@@ -424,7 +424,7 @@ def main():
     # gmap = hnp.gmap
     # hnp.write()
 
-    # dgp = DGNetParser()
+    # dgp = DGNParser()
     # dgp.set_infile(data_dir+"/raw/all_gene_disease_associations.tsv")
     # dgp.set_outdir(data_dir+"/")
     # dgp.set_gmap(gmap)

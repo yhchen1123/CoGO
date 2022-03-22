@@ -25,3 +25,46 @@ Contact: yuhaoc@zju.edu.cn. Any questions or discussions are welcomed!
 3. The proposed CoGO model achieves state-of-the-art performance in manual inspection data sets. Especially using Area Under Precision–Recall Curve (AUPRC) as evaluation metric. 
 > We evaluate the disease similarity prediction performance using both AUROC and AUPRC. This is because ROC curves can present an overly optimistic view of an algorithm's performance when applied to imbalanced data sets. 
    <div align="center"><img width="600" src="./images/results.png"/></div>
+
+## Using CoGO
+
+This repository contains:
+- Environment Setup
+- Data Processing
+- Training and Testing
+
+### Environment Setup
+
+> base environment: python 3.8, cuda 11.1, pytorch 1.9.0, torchvision 0.10.0, tensorboard 2.8.0 \
+> pytorch-geometric: \
+> pip install torch-scatter -f https://data.pyg.org/whl/torch-1.9.0+cu111.html \
+> pip install torch-sparse -f https://data.pyg.org/whl/torch-1.9.0+cu111.html \
+> pip install torch-geometric \
+> other related package: \
+> goatools 1.2.3
+
+### Data Processing
+
+The data processing codes in ./data/data_parser.py including:
+- GOParser: process GO data as knowledge graph and output triplets in the format of (source, relation, target). 
+- HNParser: process HumanNet data as undirected weighted graph and output adjacency matrix. 
+- DGNParser: process DisGeNET data as bipartite graph and output d2g matrix. Each row represents a disease and columns indicate their related genes.
+- gene2go related functions: process gene-GO associations data from NCBI Gene database. 
+
+### Training and Testing
+
+Training codes in ./src/trainer.py and the run script in run.py.
+Method will be tested on benchmark after training. 
+
+```
+"python -u run.py \
+   --data={} \                     # path to dataset
+   --h_dim={} \                    # dimension of layer h
+   --z_dim={} \                    # dimension of layer z
+   --tau={} \                      # softmax temperature
+   --lr={} \                       # learning rate
+   --epochs={} \                   # Train epochs
+   --disable-cuda={} \             # disable CUDA
+   --log-every-n-steps={} \        # log every n steps
+   ".format(data, h_dim, z_dim, tau, lr, epochs, disable_cuda, log_every_n_steps)
+```

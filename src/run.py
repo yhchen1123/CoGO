@@ -65,4 +65,15 @@ trainer.load_data(g_data, kg_data, g2o, d2g, args.data)
 
 print("Finish initializing...")
 print("---------------------------------------")
-trainer.train(args.epochs)
+# trainer.train(args.epochs)
+
+def test(path):
+    checkpoint = torch.load(path)
+    trainer.model.load_state_dict(checkpoint['model_state_dict'])
+    auroc, ap, a, tk =trainer.infer()
+
+    # with open("./results/topid.csv", "w") as f:
+    #     for i in range(len(a)):
+    #         f.write(str(a[i])+","+",".join(str(j) for j in tk[i])+"\n")
+    
+test("./runs/final/checkpoint_200.pth.tar")
