@@ -15,7 +15,7 @@ Contact: yuhaoc@zju.edu.cn. Any questions or discussions are welcomed!
 ## Contribution
 
 1. We convert disease similarity prediction problem to multi-view graph representation learning problem.
-   <div align="center"><img width="400" src="./images/multiview_net.png"/></div>
+   <div align="center"><img width="200" src="./images/multiview_net.png"/></div>
    <center>An example of multi-view network.</center>
 
 2. We propose to incorporate the disease related molecular data and GO domain knowledge into disease similarity prediction problem. A contrastive learning based method is presented to learn their correlations. 
