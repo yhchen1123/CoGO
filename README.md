@@ -83,4 +83,5 @@ Gene-GO associations:
 DisGeNET(we use all gene-disease associations)
 - https://www.disgenet.org/downloads
 
-All the datasets are compressed into ./data/raw.zip
+
+**NOTE**: All the datasets are compressed into ./data/raw.zip
