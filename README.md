@@ -19,7 +19,7 @@ Contact: yuhaoc@zju.edu.cn. Any questions or discussions are welcomed!
    <center>An example of multi-view network.</center>
 
 2. We propose to incorporate the disease related molecular data and GO domain knowledge into disease similarity prediction problem. A contrastive learning based method is presented to learn their correlations. 
-   <div align="center"><img width="800" src="./images/pipeline.png"/></div>
+   <div align="center"><img width="700" src="./images/pipeline.png"/></div>
    <center>Overview of CoGO. In the training stage, GCN and RGCN are implemented to encode features of gene interaction network and GO graph. MLP is applied to map the output of GCN and RGCN to the common embedding space. Contrastive loss is used to maximize the agreement of corresponding genes and GO terms. In the inference stage, only trained GCN is preserved to calculate the gene embedding. And disease representation is derived from related gene embedding by average pooling.</center>
 
 3. The proposed CoGO model achieves state-of-the-art performance in manual inspection data sets. Especially using Area Under Precision–Recall Curve (AUPRC) as evaluation metric. 
