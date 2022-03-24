@@ -16,7 +16,7 @@ parser.add_argument("--h_dim", default=32, type=int, help="dimension of layer h"
 parser.add_argument("--z_dim", default=32, type=int, help="dimension of layer z")
 parser.add_argument("--tau", default=1.0, type=float, help="softmax temperature")
 parser.add_argument("--lr", default=0.003, type=float, help="learning rate")
-parser.add_argument("--epochs", default=200, type=int, help="number of epochs to train")
+parser.add_argument("--epochs", default=200, type=int, help="train epochs")
 parser.add_argument("--disable-cuda", default=True, action="store_true", help="disable CUDA")
 parser.add_argument("--log-every-n-steps", default=1, type=int, help="log every n steps")
 
@@ -65,7 +65,7 @@ trainer.load_data(g_data, kg_data, g2o, d2g, args.data)
 
 print("Finish initializing...")
 print("---------------------------------------")
-# trainer.train(args.epochs)
+trainer.train(args.epochs)
 
 def test(path):
     checkpoint = torch.load(path)
@@ -76,4 +76,4 @@ def test(path):
     #     for i in range(len(a)):
     #         f.write(str(a[i])+","+",".join(str(j) for j in tk[i])+"\n")
     
-test("./runs/final/checkpoint_200.pth.tar")
+# test("./runs/final/checkpoint_200.pth.tar")
