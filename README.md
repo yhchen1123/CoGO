@@ -11,7 +11,7 @@ Contact: mchen@zju.edu.cn. Any questions or discussions are welcome!
 
 **Motivation:** Quantifying the similarity of human diseases provides guiding insights to the discovery of micro-scope mechanisms from a macro scale. Previous work demonstrated that better performance can be gained by integrating multi-view data sources or applying machine learning techniques. However, designing an efficient framework to extract and incorporate information from different biological data using deep learning models remains unexplored.
 
-**Results:** We present **CoGO**, a **Co**ntrastive learning framework to predict disease similarity based on **G**ene network and **O**ntology structure, which incorporates the gene interaction network and gene ontology (GO) domain knowledge using graph deep learning models. First, graph deep learning models are applied to encode the features of genes and GO terms from separate graph structure data. Next, gene and GO features are projected to a common embedding space via a non-linear projection. Then cross-view contrastive loss is applied to maximize the agreement of corresponding gene-GO associations and lead to meaningful gene representation. Finally, CoGO infers the similarity between diseases by the cosine similarity of disease representation vectors derived from related gene embedding. In our experiments, CoGO outperforms the most competitive baseline method on both AUROC and AUPRC, especially improving 19.57% in AUPRC (0.7733). Furthermore, we conduct a detailed case study of top similar disease pairs which is demonstrated by other studies. Empirical results show that CoGO achieves powerful performance in disease similarity problem.
+**Results:** We present **CoGO**, a **Co**ntrastive learning framework to predict disease similarity based on **G**ene network and **O**ntology structure, which incorporates the gene interaction network and gene ontology (GO) domain knowledge using graph deep learning models. First, graph deep learning models are applied to encode the features of genes and GO terms from separate graph structure data. Next, gene and GO features are projected to a common embedding space via a non-linear projection. Then cross-view contrastive loss is applied to maximize the agreement of corresponding gene-GO associations and lead to meaningful gene representation. Finally, CoGO infers the similarity between diseases by the cosine similarity of disease representation vectors derived from related gene embedding. In our experiments, CoGO outperforms the most competitive baseline method on both AUROC and AUPRC, especially improving 19.57% in AUPRC (0.7733). Furthermore, we conduct a detailed case study of top similar disease pairs demonstrated by other studies. Empirical results show that CoGO achieves powerful performance in disease similarity task.
 
 ## Introduction
 
@@ -82,10 +82,10 @@ Gene Ontology (we use all three branches in go.obo file):
 HumanNet (we use HumanNet-FN):
 - https://www.inetbio.org/humannet/networks/HumanNet-FN.tsv
 
-Gene-GO associations: 
+Gene-GO associations (we use NCBI gene2go annotation): 
 - https://ftp.ncbi.nih.gov/gene/DATA/gene2go.gz
 
-DisGeNET (we use all gene-disease associations)
+DisGeNET (we use all gene-disease associations):
 - https://www.disgenet.org/downloads
 
 
