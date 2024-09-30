@@ -1,7 +1,6 @@
-# CoGO
+# CoGO: a contrastive learning framework to predict disease similarity based on gene network and ontology structure
 
 
-Codes and models for the paper "CoGO: a contrastive learning framework to predict disease similarity based on gene network and ontology structure".
 > **To Cite:** \
 > Yuhao Chen<sup>#</sup>, Yanshi Hu<sup>#</sup>, Xiaotian Hu, Cong Feng, Ming Chen<sup>*</sup> (2022). CoGO: a contrastive learning framework to predict disease similarity based on gene network and ontology structure. _**Bioinformatics**_, 38(18), 4380-4386.
 
